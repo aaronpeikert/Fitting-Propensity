@@ -37,5 +37,4 @@ fit_cfa <- function(mat){
 }
 
 fits <- mats %>% pull(mat) %>% map(fit_cfa) %>% transpose() %>% as_tibble()
-mats <- mutate(mats, !!!fits)
-rm(fits)
+fits <- mutate(mats, !!!fits)
